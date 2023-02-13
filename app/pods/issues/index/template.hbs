@@ -1,0 +1,24 @@
+{{page-title "Index"}}
+<h3>
+    Total Number of Issues : {{this.countOfIssue}}
+</h3>
+<table class="issuesTable">
+    <tr>
+        <th>Description</th>
+        <th>Severity</th>
+        <th>Status</th>
+    </tr>
+    {{#each this.model as |issue|}}
+    <tr {{on "click" (fn this.openIssue issue.id)}}>
+        <td>
+            {{issue.description}}
+        </td>
+        <td>
+           {{issue.severity}} 
+        </td>
+        <td>
+            {{issue.status}}
+        </td>
+    </tr>
+    {{/each}}
+</table>
