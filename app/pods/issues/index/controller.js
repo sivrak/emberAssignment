@@ -3,15 +3,15 @@ import { action } from '@ember/object';
 import { service } from '@ember/service';
 
 export default class issuesIndexController extends Controller {
-
-    @service router;
+  @service router;
 
   get countOfIssue() {
+    console.log('Model Value = ', this.model);
     return this.model.length;
   }
-  
-  @action 
-  openIssue(id){
+
+  @action
+  openIssue(id) {
     this.router.transitionTo(`/issues/issue/${id}`);
   }
 }
