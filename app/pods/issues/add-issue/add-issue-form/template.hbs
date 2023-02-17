@@ -1,0 +1,25 @@
+
+    <label>
+        Description: 
+        <Input @type="text" @value={{this.desc}}/>
+    </label>
+    <br/><br/>
+    <label>
+        Severity:
+        <select {{on "change" this.setSeverity}}>
+            {{#each this.severity as |severe|}}
+                <option  value={{severe}}>{{severe}}</option>
+            {{/each}}
+        </select>
+    </label>
+    <br/><br/>
+    <label>
+        Status: 
+        <select {{on "change" this.setStatus}}>
+            {{#each this.status as |state|}}
+                <option  value={{state}}>{{state}}</option>
+            {{/each}}
+        </select>
+    </label>
+    <br/><br/>
+    <button type="submit" {{on "click" this.submit}}>Submit</button>

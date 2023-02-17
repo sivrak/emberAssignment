@@ -10,5 +10,6 @@ Router.map(function () {
   this.route('about', function () {});
   this.route('issues', function () {
     this.route('issue-details', { path: 'issue/:issue_id' });
+    this.route('add-issue', function () {});
   });
 });

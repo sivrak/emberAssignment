@@ -9,16 +9,9 @@
         <th>Status</th>
     </tr>
     {{#each this.model as |issue|}}
-    <tr {{on "click" (fn this.openIssue issue.id)}}>
-        <td>
-            {{issue.description}}
-        </td>
-        <td>
-           {{issue.severity}} 
-        </td>
-        <td>
-            {{issue.status}}
-        </td>
-    </tr>
+        <Issues::IssueList @openIssue={{this.openIssue}} @id={{issue.id}} @issue={{issue}} />
     {{/each}}
 </table>
+<LinkTo @route="issues.add-issue">
+    <button class="addBtn" type="button">Add Issue</button>
+</LinkTo>

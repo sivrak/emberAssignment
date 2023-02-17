@@ -11,3 +11,8 @@ nav{
     border: 1px solid black;
     padding: 5px;
 }
+.addBtn{
+    margin: 10px;
+    font-size: 16px;
+    padding: 5px;
+}
