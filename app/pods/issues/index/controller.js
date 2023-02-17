@@ -6,7 +6,6 @@ export default class issuesIndexController extends Controller {
   @service router;
 
   get countOfIssue() {
-    console.log('Model Value = ', this.model);
     return this.model.length;
   }
 
